@@ -23,14 +23,12 @@ class MainActivity : BaseActivity() {
         setContentView(binding.root)
 
         binding.imageView4.setVisibility(View.GONE)
-       val  coordinatorLayout:CoordinatorLayout = findViewById(R.id.coordinatorLayout);
+        val coordinatorLayout: CoordinatorLayout = findViewById(R.id.coordinatorLayout);
         coordinatorLayout.requestLayout();
 
         initCategory()
         initPopular()
         initOffer()
-
-
 
 
     }

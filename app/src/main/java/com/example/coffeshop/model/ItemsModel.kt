@@ -12,7 +12,8 @@
         var numberInCart: Int = 0,
         var extra: String = "",
 
-        ): Parcelable {
+        ):
+        Parcelable {
         constructor(parcel: Parcel) : this(
             parcel.readString().toString(),
             parcel.readString().toString(),

@@ -2,11 +2,12 @@ package com.example.coffeshop.adatper
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.coffeshop.activity.DetailActivity
 import com.example.coffeshop.databinding.ViewholderPopularBinding
 import com.example.coffeshop.model.ItemsModel
 
@@ -42,7 +43,9 @@ class ItemAdapter(private val items: MutableList<ItemsModel>) :
             .load(item.picUrl[0])
             .into(holder.binding.pic)
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+            val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+            intent.putExtra("object", items[position])
+            holder.itemView.context.startActivity(intent)
 
         }
 
