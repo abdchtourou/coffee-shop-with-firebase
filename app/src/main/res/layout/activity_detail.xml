@@ -79,7 +79,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-            <TextView
+                <TextView
                     android:id="@+id/numberItemTxt"
 
                     android:layout_width="28dp"

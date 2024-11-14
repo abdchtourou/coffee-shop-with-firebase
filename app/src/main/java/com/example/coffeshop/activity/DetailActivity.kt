@@ -54,6 +54,7 @@ class DetailActivity : BaseActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun bundle() {
+
         binding.apply {
 
             item = intent.getParcelableExtra("object")!!
