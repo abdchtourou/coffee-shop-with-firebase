@@ -1,5 +1,6 @@
 package com.example.coffeshop.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -29,6 +30,17 @@ class MainActivity : BaseActivity() {
         initCategory()
         initPopular()
         initOffer()
+        bottomMenu()
+
+
+    }
+
+    private fun bottomMenu() {
+        binding.cartBtn.setOnClickListener {
+            startActivity( Intent( this, CartActivity::class.java))
+
+
+        }
 
 
     }
